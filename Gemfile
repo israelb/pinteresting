@@ -4,6 +4,7 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'haml'
+gem 'haml-rails'
 gem 'devise', "~> 3.1.1" 
 
 group :assets do

@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
-gem 'sqlite3'
+gem 'pg'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'haml'
+gem 'devise', "~> 3.1.1" 
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'

@@ -37,5 +37,11 @@ $.rails.showConfirmDialog = (link) ->
   $(html).modal()
   $('#confirmationDialog .confirm').on 'click', -> $.rails.confirmed(link)
 
+$ ->
+  $('#pins').imagesLoaded ->
+    $('#pins').masonry
+      itemSelector: '.box'
+      isFitWidth: true
+
 
 

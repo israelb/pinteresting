@@ -7,6 +7,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'devise', "~> 3.1.1" 
 gem "paperclip", "~> 3.5.2"
+gem 'masonry-rails'
+gem 'jquery-turbolinks'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'

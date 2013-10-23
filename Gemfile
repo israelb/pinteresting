@@ -6,6 +6,7 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'haml'
 gem 'haml-rails'
 gem 'devise', "~> 3.1.1" 
+gem "paperclip", "~> 3.5.2"
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'

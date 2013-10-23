@@ -2,18 +2,24 @@
 
 %table
   %tr
+    %th Image
     %th Description
+    %th Email
     %th
     %th
     %th
 
   - @pins.each do |pin|
     %tr
+      %td= image_tag pin.image.url(:thumb)
       %td= pin.description
+      %td= pin.user.try(:email)
       %td= link_to 'Show', pin
-      %td= link_to 'Edit', edit_pin_path(pin)
-      %td= link_to 'Destroy', pin, :method => :delete, :class => 'btn btn-danger', :data => { :confirm => "Are you sure you want to delete? #{pin.description}" }
+      - if pin.user == current_user
+        %td= link_to 'Edit', edit_pin_path(pin)
+        %td= link_to 'Destroy', pin, :method => :delete, :class => 'btn btn-danger', :data => { :confirm => "Are you sure you want to delete? #{pin.description}" }
 
 %br
 
-= link_to 'New Pin', new_pin_path
+- if user_signed_in?
+  = link_to 'New Pin', new_pin_path

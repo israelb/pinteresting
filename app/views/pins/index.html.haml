@@ -1,3 +1,5 @@
+= render 'pages/home' unless user_signed_in?
+
 #pins.transitions-enabled
   - @pins.each do |pin|
     .box.panel.panel-default
@@ -9,6 +11,8 @@
       
         - if pin.user == current_user
           .actions
-            = link_to 'Edit', edit_pin_path(pin)
-            = link_to 'Destroy', pin, :method => :delete, :data => { :confirm => "Are you sure you want to delete? #{pin.description}" }
-
+            = link_to edit_pin_path(pin) do
+              %span.glyphicon.glyphicon-edit Edit                
+            = link_to pin, :method => :delete, :data => { :confirm => "Are you sure you want to delete? #{pin.description}" } do
+              %span.glyphicon.glyphicon-trash Destroy
+              

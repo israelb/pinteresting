@@ -10,5 +10,6 @@
           = @pin.description
         %p 
           = @pin.user.try(:email)
-        = link_to 'Edit', edit_pin_path(@pin)
+        = link_to edit_pin_path(@pin) do
+          %i.glyphicon.glyphicon-edit Edit                
 

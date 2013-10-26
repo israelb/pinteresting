@@ -9,6 +9,8 @@ gem 'devise', "~> 3.1.1"
 gem "paperclip", "~> 3.5.2"
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'
